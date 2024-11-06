@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct PageContent: Decodable {
+    let page: Int
+    var pageSize: Int
+    let totalPages: Int
+    let totalElements: Int
+    let content: [RowContent]
+}
