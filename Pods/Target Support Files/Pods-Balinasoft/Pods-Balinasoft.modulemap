@@ -1,0 +1,6 @@
+module Pods_Balinasoft {
+  umbrella header "Pods-Balinasoft-umbrella.h"
+
+  export *
+  module * { export * }
+}

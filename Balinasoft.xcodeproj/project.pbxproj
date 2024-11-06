@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AAA5D84228AF119E5F902636 /* libPods-Balinasoft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8096D515E3F6F8F9CEECCA7E /* libPods-Balinasoft.a */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		0456DB472CDA77BE0098F6E4 /* Balinasoft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balinasoft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2197124C1BB8739C80EC1233 /* Pods-Balinasoft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balinasoft.debug.xcconfig"; path = "Target Support Files/Pods-Balinasoft/Pods-Balinasoft.debug.xcconfig"; sourceTree = "<group>"; };
+		4541BB0D9E956B4FCB27B4A6 /* Pods-Balinasoft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balinasoft.release.xcconfig"; path = "Target Support Files/Pods-Balinasoft/Pods-Balinasoft.release.xcconfig"; sourceTree = "<group>"; };
+		8096D515E3F6F8F9CEECCA7E /* libPods-Balinasoft.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Balinasoft.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA5D84228AF119E5F902636 /* libPods-Balinasoft.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				0456DB492CDA77BE0098F6E4 /* Balinasoft */,
 				0456DB482CDA77BE0098F6E4 /* Products */,
+				C0CD3A769DA61A7AE76B44BB /* Pods */,
+				A1D74F1090F60695DD1B41EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A1D74F1090F60695DD1B41EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8096D515E3F6F8F9CEECCA7E /* libPods-Balinasoft.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0CD3A769DA61A7AE76B44BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2197124C1BB8739C80EC1233 /* Pods-Balinasoft.debug.xcconfig */,
+				4541BB0D9E956B4FCB27B4A6 /* Pods-Balinasoft.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0456DB5A2CDA77C00098F6E4 /* Build configuration list for PBXNativeTarget "Balinasoft" */;
 			buildPhases = (
+				11C53CB7F1C38E43D43A7065 /* [CP] Check Pods Manifest.lock */,
 				0456DB432CDA77BE0098F6E4 /* Sources */,
 				0456DB442CDA77BE0098F6E4 /* Frameworks */,
 				0456DB452CDA77BE0098F6E4 /* Resources */,
+				9E796E8F37E2F0E41E9041B0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				0456DB492CDA77BE0098F6E4 /* Balinasoft */,
 			);
 			name = Balinasoft;
-			packageProductDependencies = (
-			);
 			productName = Balinasoft;
 			productReference = 0456DB472CDA77BE0098F6E4 /* Balinasoft.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +155,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11C53CB7F1C38E43D43A7065 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Balinasoft-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E796E8F37E2F0E41E9041B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Balinasoft/Pods-Balinasoft-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Balinasoft/Pods-Balinasoft-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Balinasoft/Pods-Balinasoft-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0456DB432CDA77BE0098F6E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +210,7 @@
 /* Begin XCBuildConfiguration section */
 		0456DB5B2CDA77C00098F6E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2197124C1BB8739C80EC1233 /* Pods-Balinasoft.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -166,6 +237,7 @@
 		};
 		0456DB5C2CDA77C00098F6E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4541BB0D9E956B4FCB27B4A6 /* Pods-Balinasoft.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
