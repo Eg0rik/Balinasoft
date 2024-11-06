@@ -82,7 +82,6 @@
 				2197124C1BB8739C80EC1233 /* Pods-Balinasoft.debug.xcconfig */,
 				4541BB0D9E956B4FCB27B4A6 /* Pods-Balinasoft.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
