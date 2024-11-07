@@ -76,7 +76,11 @@ final class PhotoCameraPicker: NSObject, PhotoPicker {
         
         switch status {
             case .authorized: complition(true)
-            case .notDetermined: AVCaptureDevice.requestAccess(for: .video) { complition($0) }
+            case .notDetermined: AVCaptureDevice.requestAccess(for: .video) { isGranted in
+                DispatchQueue.main.async {
+                    complition(isGranted)
+                }
+            }
             default: complition(false)
         }
     }
