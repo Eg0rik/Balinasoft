@@ -16,7 +16,7 @@ final class StartViewModel: ImageLoader {
     
     //MARK: - Public properties
     @Published var pages: [PageContent] = []
-    @Published var alertMessage = ""
+    @Published var alertMessage = AlertContent(title: "", message: "")
     
     //MARK: - Private properties
     private let networkService = NetworkService()
@@ -55,7 +55,7 @@ final class StartViewModel: ImageLoader {
                 let image = UIImage(data: data)
             else {
                 DispatchQueue.main.async {
-                    self?.alertMessage = "Can't load image from \(url)"
+                    print("Can't load image from \(url)")
                     completion(nil)
                 }
                 return
@@ -72,7 +72,7 @@ final class StartViewModel: ImageLoader {
     func uploadImage(image: UIImage, id: Int, name: String) {
         serialQueue.async { [weak self] in
             self?.networkService.uploadImage(image: image, id: id, name: name) { message in
-                self?.alertMessage = message
+                self?.alertMessage = AlertContent(title: "Multipart request", message: message)
             }
         }
     }
@@ -90,7 +90,7 @@ private extension StartViewModel {
                         self.pages.append(page)
                         
                     case .failure(let err):
-                        self.alertMessage = "Can't load page \(number), look at the console"
+                        self.alertMessage = AlertContent(title: String(#function), message: "Can't load page \(number), look at the console")
                         
                         print("Can't load page \(number), AFError:\n\(err)")
                 }
