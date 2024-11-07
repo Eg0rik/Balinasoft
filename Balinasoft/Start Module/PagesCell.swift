@@ -75,8 +75,7 @@ class PagesCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        indicatorView.isHidden = false
-        indicatorView.startAnimating()
+        leftImageView.image = UIImage(systemName: "nosign")
     }
 }
 
