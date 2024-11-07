@@ -23,7 +23,7 @@ class StartViewController: UIViewController {
     private var selectedImage: UIImage?
     
     private lazy var photoPicker: PhotoPicker = {
-        let picker = PhotoLibraryPicker()
+        let picker = PhotoCameraPicker()
         picker.delegate = self
         return picker
     }()

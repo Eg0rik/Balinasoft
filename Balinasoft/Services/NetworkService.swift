@@ -24,7 +24,8 @@ final class NetworkService {
         }
     }
     
-    func uploadImage(image: UIImage, id: Int, name: String, messageCompletion: @escaping (String) -> Void) {
+    ///- Parameter completion: completion with `String` property that indicates a status of sending data to server.
+    func uploadImage(image: UIImage, id: Int, name: String, completion: @escaping (String) -> Void) {
         
         let urlString = "https://junior.balinasoft.com/api/v2/photo"
         
@@ -47,9 +48,9 @@ final class NetworkService {
         },to: urlString, method: .post).response { aFDataResponse in
             if let statusCode = aFDataResponse.response?.statusCode,
                 statusCode == 200 {
-                messageCompletion("The \(fileName) was successfully sent with status code \(statusCode)")
+                completion("`\(fileName)` was successfully sent with status code \(statusCode)")
             } else {
-                messageCompletion("Error when sending multipartFormData to server, look at console")
+                completion("Error when sending multipartFormData to server, look at console")
                 debugPrint(aFDataResponse)
             }
         }
