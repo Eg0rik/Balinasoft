@@ -175,7 +175,7 @@ extension StartViewController: UITableViewDelegate {
 //MARK: - PhotoPickerDelegate
 extension StartViewController: PhotoPickerDelegate {
     func picker(_ picker: any PhotoPicker, didSelect image: UIImage) {
-        viewModel.uploadImage(image: image, id: selectedRowId ?? -1, name: "Egor")
+        viewModel.uploadImage(image: image, id: selectedRowId ?? -1, name: "Eremeichik Egor")
     }
 }
 
