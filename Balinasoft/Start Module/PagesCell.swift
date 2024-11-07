@@ -75,6 +75,7 @@ class PagesCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         leftImageView.image = UIImage(systemName: "nosign")
     }
 }
